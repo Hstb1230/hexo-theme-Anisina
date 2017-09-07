@@ -97,6 +97,17 @@ layout: layout
                 <% } %>
 
                 <ul class="pager">
+				    <script type="text/javascript">
+					function tonext() {
+					    var state = { 'page_id': 1, 'user_id': 5 };
+						var title = '';
+						var nexturl = document.getElementById("next");
+						var url = next.href;
+						//history.pushState(state, title, url);
+						//return false;
+						return true;
+					}
+					</script>
                     <% if (page.prev){ %>
                     <li class="previous">
                         <a href="<%- config.root %><%- page.prev.path %>" data-toggle="tooltip" data-placement="top"
@@ -105,11 +116,13 @@ layout: layout
                     <% } %>
                     <% if (page.next){ %>
                     <li class="next">
-                        <a href="<%- config.root %><%- page.next.path %>" data-toggle="tooltip" data-placement="top"
+                        <a id="next" onclick="tonext();" href="<%- config.root %><%- page.next.path %>" data-toggle="tooltip" data-placement="top"
                            title="<%- page.next.title %>">Next Post &rarr;</a>
                     </li>
                     <% } %>
                 </ul>
+				
+				<% if(page.comments) { %>
 
                 <% if(config['duoshuo_username']) { %>
                 <!-- 多说评论框 start -->
@@ -131,8 +144,30 @@ layout: layout
                 <!-- disqus 评论框 end -->
                 <% } %>
 
+                <% if(config['use_gitment']) { %>
+                <!-- gitment 评论框 start -->
+                <div id="container"></div>
+				<link rel="stylesheet" href="<%= config.root %>css/gitment.css">
+				<%- js('js/gitment.js') %>
+				<script>
+				var gitment = new Gitment({
+				id: '<%= page.id %>',
+				owner: '<%= config.gitment_owner %>',
+				repo: '<%= config.gitment_repo %>',
+				oauth: {
+				client_id: '<%= config.gitment_oauth_client_id %>',
+				client_secret: '<%= config.gitment_oauth_client_secret %>',
+				},
+				'title': '<%= page.title %>',
+				'desc': '<%= page.subtitle %>',
+				'perPage': '<%= config.gitment_perPage %>',
+				'maxCommentHeight': '<%= config.gitment_maxCommentHeight %>',
+				})
+				gitment.render('container')
+				</script>
+                <!-- gitment 评论框 end -->
+                <% } %>
 
-                <!--加入新的评论系统-->
                 <% if(config['use_livere']) {%>
                 <!-- 来必力City版安装代码 -->
                 <div id="lv-container" data-id="city" data-uid="<%= config['livere_uid'] %>">
@@ -153,6 +188,8 @@ layout: layout
                 </div>
                 <!-- City版安装代码已完成 -->
                 <%}%>
+				
+				<% } %>
             </div>
 
             <div class="hidden-xs col-sm-3 toc-col">
@@ -186,8 +223,9 @@ layout: layout
                 </section>
                 <% } %>
 
-                <!-- Friends Blog -->
+				<% if(config.echofriends) { %>
                 <% if(config.friends) { %>
+                <!-- Friends Blog -->
                 <div style="margin-top: 20px;">
                     <h5 class="text-center">FRIENDS</h5>
                     <ul class="list-inline text-center">
@@ -197,12 +235,14 @@ layout: layout
                     </ul>
                 </div>
                 <% } %>
+				<% } %>
             </div>
         </div>
 
     </div>
 </article>
 
+<% if(page.comments) { %>
 <% if(config['duoshuo_username']) { %>
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -241,6 +281,8 @@ layout: layout
 </script>
 <!-- disqus 公共JS代码 end -->
 <% } %>
+<% } %>
+
 <% if(config['anchorjs']) { %>
 <!-- async load function -->
 <script>

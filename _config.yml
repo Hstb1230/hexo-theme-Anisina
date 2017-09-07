@@ -3,36 +3,35 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Haojen # your blog title name
-subtitle:  
-author: Haojen Ma # 作者
-language: 
-timezone: 
+title: Hstb # your blog title name
+subtitle: 一个人的星空
+author: Hstb # 作者
+language: zh-CN
+timezone: Asia/Shanghai
 
-# custom Site settings
-# more detail check out docs
-SEOTitle: Haojen's blog 
-header-img: //o7bkkhiex.bkt.clouddn.com/lion-blur-bg.jpg
-email: HaojenMa@gmail.com
-description: "马浩珍在 Github 上的个人博客"
-keyword: # seo key words
+SEOTitle: Hstb的小世界
+header-img: //img.1sls.cn/Pic/gif/8c843331da5fdfa14fdd6eb6be01a08e
+email: i@hstb.me
+description: "一个人的星空"
+keyword: Hstb # seo key words
 
-favicon: # your favicon png
+favicon: //img.1sls.cn/Pic/gif/8c843331da5fdfa14fdd6eb6be01a08e # your favicon png
 # custom end
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://haojen.github.io
+url: //i.hstb1230.com
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :id.html
 permalink_defaults:
+  lang: zh-CN
 
 # SNS settings
 # RSS:
-weibo_username: haojen
-zhihu_username: megahertz
-github_username: haojen
-twitter_username: ehazon
+weibo_username: 745412309
+zhihu_username: ymfy
+github_username: hstb1230
+twitter_username: hstb_i
 facebook_username:  
 linkedin_username:  
 
@@ -46,21 +45,30 @@ disqus_username:
 # Duoshuo settings
 duoshuo_username:  # 你的多说帐号
 # Share component is depend on Comment so we can NOT use share only.
-duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+duoshuo_share: false                     # set to false if you want to use Comment without Sharing
+
+# gitment settings
+use_gitment: true
+gitment_owner: Hstb1230 #你的 GitHub ID
+gitment_repo: hstb.me #存储评论的 repo
+gitment_oauth_client_id: 54e7459b39803a59182c
+gitment_oauth_client_secret: 83d831527e4e76979e1876a0da80699ccc715702
+gitment_perPage: 10 #每页评论数
+gitment_maxCommentHeight: 250 #最多评论数
 
 # Use livere
 use_livere:
 
 # Analytics settings
 # Baidu Analytics
-ba_track_id:
+ba_track_id: 4660d5d28ff4f15c17bbe0619d9dda03
 # Google Analytics
-ga_track_id:             # Format: UA-xxxxxx-xx
-ga_domain:
+ga_track_id: UA-85067626-1            # Format: UA-xxxxxx-xx
+ga_domain: i.hstb1230.com
 
 # Sidebar settings
-sidebar-about-description: # 个人描述
-sidebar-avatar:     # use absolute URL
+sidebar-about-description: 一个不知所措的逗比 # 个人描述
+sidebar-avatar: //img.1sls.cn/Pic/gif/8c843331da5fdfa14fdd6eb6be01a08e # use absolute URL
 
 
 # Featured Tags
@@ -68,7 +76,33 @@ featured-tags: true                     # whether or not using Feature-Tags
 featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
 
 # friends
-friends:  # 友链
+echofriends: false
+friends: [
+        {
+        title: "梦阳的后宫",
+        href: "https://srun.in/"
+        },
+        {
+        title: "Troy的星球",
+        href: "https://itroy.cc/"
+        },
+        {
+        title: "军医的实验室",
+        href: "http://www.junyi.pw/"
+        },
+        {
+        title: "Alan这个大逗比",
+        href: "http://www.alan233.cn/"
+        },
+        {
+        title: "一个奇怪的坏蛋",
+        href: "http://www.wjyup.com/"
+        },
+        {
+        title: "小潘的博客",
+        href: "https://www.imxiaopan.net/"
+        }
+] # 友链
 
 # Directory
 source_dir: source
@@ -92,14 +126,14 @@ relative_link: false
 future: true
 highlight:
   enable: true
-  line_number: false
+  line_number: true
   auto_detect: false
   tab_replace:
 
 # Category & Tag
 default_category: uncategorized
-category_map:
-tag_map:
+category_map: category
+tag_map: tags
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
@@ -146,8 +180,8 @@ clip-avatar: "?imageView2/2/w/300/h/300/interlace/1/q/90"
 clip-home-post-bg: "?imageView2/1/w/800/h/300/interlace/1/q/70"
 
 # post default images
-post-default-img: #博文默认的图片
-post-default-img-mobile: #移动端显示的图片
+post-default-img: //img.1sls.cn/RandImg/Slideshow #//chat.1sls.cn/Img.php?Random=9999 #博文默认的图片
+post-default-img-mobile: //img.1sls.cn/RandImg/Slideshow #//chat.1sls.cn/Img.php?Random=9999 #移动端显示的图片
 
 # search api , set your custom key
 swiftype_key: 
