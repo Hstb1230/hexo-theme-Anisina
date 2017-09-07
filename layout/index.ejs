@@ -21,7 +21,7 @@ layout: page
         <% } %>
         <div class="post-content-preview">
             <p>
-                <%- truncate(strip_html(post.content), {length: 150, omission: '..'}) %>
+                <%- //truncate(strip_html(post.content), {length: 150, omission: '.....'}) %>
             </p>
         </div>
     </a>
@@ -42,9 +42,10 @@ layout: page
             <%- post.subtitle %>
         </h3>
         <% } %>
+
         <div class="post-content-preview">
             <p>
-                <%- truncate(strip_html(post.content), {length: 150, omission: '..'}) %>
+                <%- //truncate(strip_html(post.content), {length: 150, omission: '.....'}) %>
             </p>
         </div>
     </a>
@@ -57,7 +58,6 @@ layout: page
 
 
 <!-- 翻页 pager -->
-
 <ul class="pager">
     <% if (page.prev){ %>
     <li class="previous">
