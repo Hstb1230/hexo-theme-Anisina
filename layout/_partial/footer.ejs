@@ -1,8 +1,8 @@
-<!-- Footer -->
 <footer>
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+				<% if (config.RSS || config.twitter_username || config.zhihu_username || config.weibo_username || config.facebook_username || config.github_username || config.linkedin_username) { %>
                 <br>
                 <ul class="list-inline text-center">
                 <% if (config.RSS) { %>
@@ -81,6 +81,7 @@
                 <% } %>
 
                 </ul>
+				<% } %>
                 <p class="copyright text-muted">
                     Copyright &copy; <a href="/"><%= config.title %></a> <%= new Date().getFullYear() %><span id="busuanzi_container_site_pv" style="font-size: 12px;"> | PV: <span id="busuanzi_value_site_pv"></span> Times</span><br>
                     Theme by <a target="_blank" href="https://haojen.github.io/">Haojen Ma</a> & Power by <a target="_blank" href="https://hexo.io/zh-cn/">Hexo</a>
