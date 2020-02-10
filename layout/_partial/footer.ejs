@@ -83,8 +83,16 @@
                 </ul>
 				<% } %>
                 <p class="copyright text-muted">
-                    Copyright &copy; <a href="/"><%= config.title %></a> <%= new Date().getFullYear() %><span id="busuanzi_container_site_pv" style="font-size: 12px;"> | PV: <span id="busuanzi_value_site_pv"></span> Times</span><br>
-                    Theme by <a target="_blank" href="https://haojen.github.io/">Haojen Ma</a> & Power by <a target="_blank" href="https://hexo.io/zh-cn/">Hexo</a>
+                    Copyright &copy; 2015-<%= new Date().getFullYear() %> <a href="/"><%= config.SEOTitle %></a>
+					<% if(theme.ICP_license) {%>
+						&nbsp;|&nbsp;
+						<a href="http://www.beian.miit.gov.cn/" target="_blank"><%- theme.ICP_license %></a>
+					<% } %>
+					<% if (config.bsz_enable) { %>
+						<span id="busuanzi_container_site_pv" style="font-size: 12px;"> | PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+					<% } %>
+					<br />					
+                    Theme by <a target="_blank" href="https://haojen.github.io/">Haojen Ma</a> & Power by <a target="_blank" href="https://hexo.io/zh-cn/">Hexo</a> & Modified by <a target="_blank" href="<%- config.url %>/about/">Webmaster</a>
                 </p>
 
             </div>
@@ -177,4 +185,6 @@
   _st('install','<%= config.swiftype_key%>','2.0.0');
 </script>
 
+<% if (config.bsz_enable) { %>
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<% } %>
