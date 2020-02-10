@@ -3,35 +3,36 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hstb # your blog title name
-subtitle: 一个人的星空
-author: Hstb # 作者
-language: zh-CN
-timezone: Asia/Shanghai
+title: Haojen # your blog title name
+subtitle:  
+author: Haojen Ma # 作者
+language: 
+timezone: 
 
-SEOTitle: Hstb的小世界
-header-img: //img.1sls.cn/Pic/gif/8c843331da5fdfa14fdd6eb6be01a08e
-email: i@hstb.me
-description: "一个人的星空"
-keyword: Hstb # seo key words
+# custom Site settings
+# more detail check out docs
+SEOTitle: Haojen's blog 
+header-img: //o7bkkhiex.bkt.clouddn.com/lion-blur-bg.jpg
+email: HaojenMa@gmail.com
+description: "马浩珍在 Github 上的个人博客"
+keyword: # seo key words
 
-favicon: //img.1sls.cn/Pic/gif/8c843331da5fdfa14fdd6eb6be01a08e # your favicon png
+favicon: # your favicon png
 # custom end
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: //i.hstb1230.com
+url: http://haojen.github.io
 root: /
-permalink: :id.html
+permalink: :year/:month/:day/:title/
 permalink_defaults:
-  lang: zh-CN
 
 # SNS settings
 # RSS:
-weibo_username: 745412309
-zhihu_username: ymfy
-github_username: hstb1230
-twitter_username: hstb_i
+weibo_username: haojen
+zhihu_username: megahertz
+github_username: haojen
+twitter_username: ehazon
 facebook_username:  
 linkedin_username:  
 
@@ -45,14 +46,14 @@ disqus_username:
 # Duoshuo settings
 duoshuo_username:  # 你的多说帐号
 # Share component is depend on Comment so we can NOT use share only.
-duoshuo_share: false                     # set to false if you want to use Comment without Sharing
+duoshuo_share: false     # set to false if you want to use Comment without Sharing
 
 # gitment settings
-use_gitment: true
+use_gitment: false
 gitment_owner: Hstb1230 #你的 GitHub ID
-gitment_repo: hstb.me #存储评论的 repo
-gitment_oauth_client_id: 54e7459b39803a59182c
-gitment_oauth_client_secret: 83d831527e4e76979e1876a0da80699ccc715702
+gitment_repo: hstb1230.github.io #存储评论的 repo
+gitment_oauth_client_id: 
+gitment_oauth_client_secret: 
 gitment_perPage: 10 #每页评论数
 gitment_maxCommentHeight: 250 #最多评论数
 
@@ -61,14 +62,14 @@ use_livere:
 
 # Analytics settings
 # Baidu Analytics
-ba_track_id: 4660d5d28ff4f15c17bbe0619d9dda03
+ba_track_id:
 # Google Analytics
-ga_track_id: UA-85067626-1            # Format: UA-xxxxxx-xx
-ga_domain: i.hstb1230.com
+ga_track_id:             # Format: UA-xxxxxx-xx
+ga_domain:
 
 # Sidebar settings
-sidebar-about-description: 一个不知所措的逗比 # 个人描述
-sidebar-avatar: //img.1sls.cn/Pic/gif/8c843331da5fdfa14fdd6eb6be01a08e # use absolute URL
+sidebar-about-description: # 个人描述
+sidebar-avatar:     # use absolute URL
 
 
 # Featured Tags
@@ -77,32 +78,7 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 
 # friends
 echofriends: false
-friends: [
-        {
-        title: "梦阳的后宫",
-        href: "https://srun.in/"
-        },
-        {
-        title: "Troy的星球",
-        href: "https://itroy.cc/"
-        },
-        {
-        title: "军医的实验室",
-        href: "http://www.junyi.pw/"
-        },
-        {
-        title: "Alan这个大逗比",
-        href: "http://www.alan233.cn/"
-        },
-        {
-        title: "一个奇怪的坏蛋",
-        href: "http://www.wjyup.com/"
-        },
-        {
-        title: "小潘的博客",
-        href: "https://www.imxiaopan.net/"
-        }
-] # 友链
+friends:  # 友链
 
 # Directory
 source_dir: source
@@ -126,14 +102,15 @@ relative_link: false
 future: true
 highlight:
   enable: true
-  line_number: true
+  # 显示行号
+  line_number: false
   auto_detect: false
   tab_replace:
 
 # Category & Tag
 default_category: uncategorized
-category_map: category
-tag_map: tags
+category_map:
+tag_map:
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
@@ -180,8 +157,8 @@ clip-avatar: "?imageView2/2/w/300/h/300/interlace/1/q/90"
 clip-home-post-bg: "?imageView2/1/w/800/h/300/interlace/1/q/70"
 
 # post default images
-post-default-img: //img.1sls.cn/RandImg/Slideshow #//chat.1sls.cn/Img.php?Random=9999 #博文默认的图片
-post-default-img-mobile: //img.1sls.cn/RandImg/Slideshow #//chat.1sls.cn/Img.php?Random=9999 #移动端显示的图片
+post-default-img: #博文默认的图片
+post-default-img-mobile: #移动端显示的图片
 
 # search api , set your custom key
 swiftype_key: 
